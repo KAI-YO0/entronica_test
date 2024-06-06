@@ -1,0 +1,706 @@
+{
+	"info": {
+		"_postman_id": "1789925f-785a-43b0-90de-5ec7fc096160",
+		"name": "Entronica Test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30212667"
+	},
+	"item": [
+		{
+			"name": "Customer API",
+			"item": [
+				{
+					"name": "Get All Customer",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/customers",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"customers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Customer by ID",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/customers/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"customers",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Customer",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"first_name\" : \"test\",\r\n    \"last_name\" : \"postman\",\r\n    \"birth_date\" : \"2002-03-15\",\r\n    \"phone_number\" : \"0877538574\",\r\n    \"email\" : \"test@postman.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/customers",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"customers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Customer",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"first_name\" : \"testzzz\",\r\n    \"last_name\" : \"postmanzz\",\r\n    \"birth_date\" : \"2002-03-15\",\r\n    \"phone_number\" : \"0877538574\",\r\n    \"email\" : \"test@postman.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/customers/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"customers",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Customer",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"first_name\" : \"testzzz\",\r\n    \"last_name\" : \"postmanzz\",\r\n    \"birth_date\" : \"2002-03-15\",\r\n    \"phone_number\" : \"0877538574\",\r\n    \"email\" : \"test@postman.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/customers/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"customers",
+								"3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Customer Address API",
+			"item": [
+				{
+					"name": "Get All Customer Address",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/customer_addresses",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"customer_addresses"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Customer Address by ID",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/customer_addresses/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"customer_addresses",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Customer Address",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"customer_id\" : 4,\r\n    \"address_type\" : \"home,shipping,billing\",\r\n    \"street_address\" : \"2\",\r\n    \"village\" : \"postman vil\",\r\n    \"sub_district\" : \"klong-thanon\",\r\n    \"district\" : \"saimai\",\r\n    \"province\" : \"bangkok\",\r\n    \"postal_code\" : \"10220\",\r\n    \"country\" : \"thailand\",\r\n    \"description\" : \"บ้าน\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/customer_addresses",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"customer_addresses"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Customer Address",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"customer_id\" : 1,\r\n    \"address_type\" : \"home,shipping,billing\",\r\n    \"street_address\" : \"2\",\r\n    \"village\" : \"postman vils\",\r\n    \"sub_district\" : \"klong-thanon\",\r\n    \"district\" : \"saimai\",\r\n    \"province\" : \"bangkok\",\r\n    \"postal_code\" : \"10220\",\r\n    \"country\" : \"USA\",\r\n    \"description\" : \"บ้าน\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/customer_addresses/7",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"customer_addresses",
+								"7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Customer Address",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"first_name\" : \"testzzz\",\r\n    \"last_name\" : \"postmanzz\",\r\n    \"birth_date\" : \"2002-03-15\",\r\n    \"phone_number\" : \"0877538574\",\r\n    \"email\" : \"test@postman.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/customer_addresses/7",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"customer_addresses",
+								"7"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Package API",
+			"item": [
+				{
+					"name": "Get All Package",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/packages",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"packages"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Package by ID",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/packages/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"packages",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Package",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"5G Professionals​\",\r\n    \"monthly_fee\": \"699\",\r\n    \"call_minutes\": \"300m โทรฟรีทุกเครือข่าย\",\r\n    \"data_allowance\": \"50GB (เล่นเน็ตต่อเนื่อง ความเร็วสูงสุด 6Mbps)\",\r\n    \"description_details\": \"5G Professionals​ 699 บาท เน็ต 5G เต็มสปีด50GB(เล่นเน็ตต่อเนื่อง ความเร็วสูงสุด 6Mbps) 300นาทีโทรฟรีทุกเครือข่าย ไม่จำกัด Wifi Microsoft 365 Personal 24เดือน\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/packages",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"packages"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Package",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"5G Professionalsz​\",\r\n    \"monthly_fee\": \"999\",\r\n    \"call_minutes\": \"300m โทรฟรีทุกเครือข่ายz\",\r\n    \"data_allowance\": \"50GB (เล่นเน็ตต่อเนื่อง ความเร็วสูงสุด 6Mbps)z\",\r\n    \"description_details\": \"5G Professionals​ 699 บาท เน็ต 5G เต็มสปีด50GB(เล่นเน็ตต่อเนื่อง ความเร็วสูงสุด 6Mbps) 300นาทีโทรฟรีทุกเครือข่าย ไม่จำกัด Wifi Microsoft 365 Personal 24เดือนz\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/packages/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"packages",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Package",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"first_name\" : \"testzzz\",\r\n    \"last_name\" : \"postmanzz\",\r\n    \"birth_date\" : \"2002-03-15\",\r\n    \"phone_number\" : \"0877538574\",\r\n    \"email\" : \"test@postman.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/packages/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"packages",
+								"3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Subscription API",
+			"item": [
+				{
+					"name": "Get All Subscription",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/subscriptions",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"subscriptions"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Subscriptionby ID",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/subscriptions/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"subscriptions",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Subscription",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"customer_id\": 2,\r\n    \"package_id\": 3,\r\n    \"customer_address_id\": 2,\r\n    \"start_date\": \"2024-06-06T16:53:00.000Z\",\r\n    \"end_date\": \"2024-07-06T16:53:00.000Z\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/subscriptions",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"subscriptions"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Subscription",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"customer_id\": 2,\r\n    \"package_id\": 3,\r\n    \"customer_address_id\": 3,\r\n    \"start_date\": \"2024-06-06T16:53:00.000Z\",\r\n    \"end_date\": \"2024-07-06T16:53:00.000Z\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/subscriptions/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"subscriptions",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Subscription",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"first_name\" : \"testzzz\",\r\n    \"last_name\" : \"postmanzz\",\r\n    \"birth_date\" : \"2002-03-15\",\r\n    \"phone_number\" : \"0877538574\",\r\n    \"email\" : \"test@postman.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/subscriptions/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"subscriptions",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Customer Count",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"customer_id\": 2,\r\n    \"package_id\": 3,\r\n    \"customer_address_id\": 2,\r\n    \"start_date\": \"2024-06-06T16:53:00.000Z\",\r\n    \"end_date\": \"2024-07-06T16:53:00.000Z\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/subscriptions/new_customer",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"subscriptions",
+								"new_customer"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Customer List",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"customer_id\": 2,\r\n    \"package_id\": 3,\r\n    \"customer_address_id\": 2,\r\n    \"start_date\": \"2024-06-06T16:53:00.000Z\",\r\n    \"end_date\": \"2024-07-06T16:53:00.000Z\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/subscriptions/new_customer_list",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"subscriptions",
+								"new_customer_list"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
