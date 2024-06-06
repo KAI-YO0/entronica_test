@@ -7,12 +7,15 @@ const mysql = require('mysql')
 
 const customerRoutes = require('./routes/customerRoutes')
 const customerAddressRoutes = require('./routes/customerAddressRoutes')
+const packageRoutes = require('./routes/packageRoutes')
 
 
 app.use(bodyParser.json());
 
 app.use('/api/customers', customerRoutes);
 app.use('/api/customer_addresses', customerAddressRoutes);
+app.use('/api/packages', packageRoutes);
+
 
 app.use(express.urlencoded({extended: true}));
 

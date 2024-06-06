@@ -1,13 +1,13 @@
 const CustomerAddress = require('../models/customerAddressModel')
 
-// Get all customers
+// Get all customerAddresses
 exports.getAllCustomerAddresses = async (req, res) => {
     try {
-      const customers = await CustomerAddress.findAll();
+      const customerAddresses = await CustomerAddress.findAll();
       res.status(200).send({
         success: true,
         message: "CustomerAddress Lists",
-        data: customers,
+        data: customerAddresses,
       });
     } catch (error) {
       console.error(error);
@@ -15,15 +15,15 @@ exports.getAllCustomerAddresses = async (req, res) => {
     }
   };
   
-  // Get customer by ID
+  // Get customerAddress by ID
   exports.getCustomerAddressById = async (req, res) => {
     try {
-      const customer = await CustomerAddress.findByPk(req.params.id);
-      if (customer) {
+      const customerAddress = await CustomerAddress.findByPk(req.params.id);
+      if (customerAddress) {
         res.status(200).send({
           success: true,
           message: "CustomerAddress List",
-          data: customer,
+          data: customerAddress,
         });
       } else {
         res.status(404).json({ message: 'CustomerAddress not found' });
@@ -34,14 +34,14 @@ exports.getAllCustomerAddresses = async (req, res) => {
     }
   };
   
-  // Create a new customer
+  // Create a new customerAddress
   exports.createCustomerAddress = async (req, res) => {
     try {
-      const {customer_id , address_type , street_address , village , 
+      const {customerAddress_id , address_type , street_address , village , 
         sub_district , district , province , postal_code , country , description} = req.body;
 
       const newCustomerAddress = await CustomerAddress.create({
-        customer_id,
+        customerAddress_id,
         address_type,
         street_address,
         village,
@@ -59,16 +59,16 @@ exports.getAllCustomerAddresses = async (req, res) => {
     }
   };
   
-  // Update a customer
+  // Update a customerAddress
   exports.updateCustomerAddress = async (req, res) => {
     try {
-      const customer = await CustomerAddress.findByPk(req.params.id);
-      if (customer) {
-        await customer.update(req.body);
+      const customerAddress = await CustomerAddress.findByPk(req.params.id);
+      if (customerAddress) {
+        await customerAddress.update(req.body);
         res.status(200).send({
           success: true,
           message: "Edit CustomerAddress Successful",
-          data: customer,
+          data: customerAddress,
         });
       } else {
         res.status(404).json({ message: 'CustomerAddress not found' });
@@ -79,12 +79,12 @@ exports.getAllCustomerAddresses = async (req, res) => {
     }
   };
   
-  // Delete a customer
+  // Delete a customerAddress
   exports.deleteCustomerAddress = async (req, res) => {
     try {
-      const customer = await CustomerAddress.findByPk(req.params.id);
-      if (customer) {
-        await customer.destroy();
+      const customerAddress = await CustomerAddress.findByPk(req.params.id);
+      if (customerAddress) {
+        await customerAddress.destroy();
         res.json({ message: 'CustomerAddress deleted successfully' });
       } else {
         res.status(404).json({ message: 'CustomerAddress not found' });

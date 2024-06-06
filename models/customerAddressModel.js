@@ -1,4 +1,3 @@
-// models/CustomerAddress.js
 const { DataTypes } = require('sequelize');
 const sequelize = require('../config/database');
 const Customer = require('../models/customerModel');

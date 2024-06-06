@@ -1,20 +1,19 @@
-// models/Subscription.js
-const { DataTypes, Model } = require('sequelize');
+const { DataTypes } = require('sequelize');
 const sequelize = require('../config/database');
-const Customer = require('./Customer');
-const Package = require('./Package');
-const CustomerAddress = require('./CustomerAddress');
+const Customer = require('../models/customerModel');
+const Package = require('./packageModel');
+const CustomerAddress = require('./customerAddressModel');
 
-class Subscription extends Model {}
-
-Subscription.init({
+const Subscription = sequelize.define('Subscription',{
   subscription_id: {
     type: DataTypes.BIGINT,
+    allowNull: false,
     primaryKey: true,
     autoIncrement: true
   },
   customer_id: {
     type: DataTypes.BIGINT,
+    allowNull: false,
     references: {
       model: Customer,
       key: 'customer_id'
@@ -22,6 +21,7 @@ Subscription.init({
   },
   package_id: {
     type: DataTypes.BIGINT,
+    allowNull: false,
     references: {
       model: Package,
       key: 'package_id'
@@ -29,18 +29,41 @@ Subscription.init({
   },
   customer_address_id: {
     type: DataTypes.BIGINT,
+    allowNull: false,
     references: {
       model: CustomerAddress,
       key: 'customer_address_id'
     }
   },
-  start_date: DataTypes.DATE,
-  end_date: DataTypes.DATE
+  start_date: {
+    type: DataTypes.DATE,
+    allowNull: false,
+  },
+  end_date: {
+    type: DataTypes.DATE,
+    allowNull: false,
+  },
+  created_at: {
+    type: DataTypes.DATE,
+    allowNull: false,
+    defaultValue: DataTypes.NOW
+  },
+  updated_at: {
+    type: DataTypes.DATE,
+    allowNull: false,
+    defaultValue: DataTypes.NOW
+  },
+  deleted_at: {
+    type: DataTypes.DATE,
+    allowNull: true
+}
 }, {
-  sequelize,
-  modelName: 'Subscription',
   tableName: 'subscriptions',
-  timestamps: true
+  timestamps: true,
+  createdAt: 'created_at',  
+  updatedAt: 'updated_at',  
+  deletedAt: 'deleted_at', 
+  paranoid: true
 });
 
 module.exports = Subscription;
