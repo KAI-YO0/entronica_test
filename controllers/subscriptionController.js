@@ -1,4 +1,6 @@
 const Subscription = require('../models/subscriptionModel')
+const sequelize  = require('../config/database');
+const { QueryTypes } = require('sequelize');
 
 // Get all subscriptions
 exports.getAllSubscriptions = async (req, res) => {
@@ -89,4 +91,38 @@ exports.getAllSubscriptions = async (req, res) => {
     }
   };
 
-  // new customers everyday
+  // new customers count
+  exports.newCustomerReportCount =  async (req, res) => {
+    try {
+        const sqlQuery = `
+            SELECT DATE(start_date) AS registration_date, COUNT(*) AS new_customers
+            FROM Subscriptions
+            GROUP BY registration_date
+            ORDER BY registration_date
+            `
+
+        const newCustomerReport = await sequelize.query(sqlQuery, { type: QueryTypes.SELECT });
+
+        res.json({ message: 'New customers count successfully', newCustomerReport });
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({ message: 'Internal Server Error' });
+    }
+  };
+
+  // new customers list
+  exports.newCustomerReportList =  async (req, res) => {
+    try {
+        const sqlQuery = `
+            SELECT customer_id  AS CustomerID , Date (start_date) AS registration_date, package_id AS PackageID 
+            FROM Subscriptions 
+            ORDER BY customer_id, registration_date;
+            `
+
+        const newCustomerReport = await sequelize.query(sqlQuery, { type: QueryTypes.SELECT });
+        res.json({ message: 'New customers  successfully', newCustomerReport });
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({ message: 'Internal Server Error' });
+    }
+  };

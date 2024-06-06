@@ -1,9 +1,12 @@
 
 const { Sequelize } = require('sequelize');
 
-const sequelize = new Sequelize('entronica_test', 'root', '', {
+const sequelize = new Sequelize({
   host: 'localhost',
-  dialect: 'mysql'
+  dialect: 'mysql',
+  username: 'root',
+  password: '',
+  database: 'entronica_test'
 });
 
 // db.connect((err) => {
